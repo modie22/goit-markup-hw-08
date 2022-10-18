@@ -13,7 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-     <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="page-header text-decor">
@@ -21,6 +21,15 @@
         <a href="./index.html" class="logo-header"
           ><span class="logo-web">Web</span>Studio</a
         >
+        <button
+          class="menu-toggle open js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="mobile-menu__icon" width="24px" height="16px">
+            <use href="./images/symbol-section.svg#icon-menu"></use>
+          </svg>
+        </button>
         <nav>
           <ul class="site-nav list">
             <li class="site-nav__item">
@@ -29,7 +38,9 @@
             <li class="site-nav__item">
               <a href="./portfolio.html" class="site-nav__link current">Портфоліо</a>
             </li>
-            <li class="site-nav__item"><a href="" class="site-nav__link">Контакти</a></li>
+            <li class="site-nav__item">
+              <a href="" class="site-nav__link">Контакти</a>
+            </li>
           </ul>
         </nav>
         <ul class="auth-nav list">
@@ -50,6 +61,65 @@
             >
           </li>
         </ul>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="menu-toggle close js-close-menu">
+            <svg class="menu-close" width="18px" height="18px">
+              <use href="./images/symbol-section.svg#menu-close"></use>
+            </svg>
+          </button>
+          <div class="container">
+            <div class="mob-menu-top">
+              <nav class="menu-nav">
+                <ul class="menu-nav__list list">
+                  <li class="menu-nav__item">
+                    <a href="./index.html" class="menu-nav__link"
+                      ><span class="menu__link-color">Студия</span></a
+                    >
+                  </li>
+                  <li class="menu-nav__item">
+                    <a href="./portfolio.html" class="menu-nav__link current-menu"
+                      >Портфолио</a
+                    >
+                  </li>
+                  <li class="menu-nav__item">
+                    <a href="" class="menu-nav__link">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="mob-menu-bottom">
+              <ul class="menu-contact-list list">
+                <li class="menu-contact-list__item">
+                  <a href="tel:+380961111111" class="menu-contact-list__tel">
+                    +38 096 111 11 11</a
+                  >
+                </li>
+                <li class="menu-contact-list__item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="menu-contact-list__mail"
+                  >
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="menu-social-list list">
+                <li class="menu-social-item">
+                  <a href="" class="menu-social-link">Instagram</a>
+                </li>
+                <li class="menu-social-item">
+                  <a href="" class="menu-social-link">Twitter</a>
+                </li>
+                <li class="menu-social-item">
+                  <a href="" class="menu-social-link">Facebook</a>
+                </li>
+                <li class="menu-social-item">
+                  <a href="" class="menu-social-link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -84,12 +154,33 @@
             <li class="portfolio-list__item">
               <a href="">
                 <div class="portfolio-list__portfoli-images">
-                  <img
-                    src="./images/portfilio/portf1.jpg"
-                    alt="Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/studio-project1.jpg     1x,
+                        ./images/studio-project1-2x-.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/studio-project1-tab.jpg    1x,
+                        ./images/studio-project1-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/studio-project1-mob.jpg    1x,
+                        ./images/studio-project1-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/studio-project1.jpg"
+                      alt="Проекты компании"
+                    />
+                  </picture>
                   <div>
                     <p class="portfolio-list__portfolio-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -108,11 +199,33 @@
             <li class="portfolio-list__item">
               <a href="">
                 <div class="portfolio-list__portfoli-images">
-                  <img
-                    src="./images/portfilio/portf2.jpg"
-                    alt="Постер з двома баскетболістами"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/studio-project2.jpg    1x,
+                        ./images/studio-project2-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/studio-project2-tab.jpg    1x,
+                        ./images/studio-project2-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/studio-project2-mob.jpg    1x,
+                        ./images/studio-project2-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/studio-project2.jpg"
+                      alt="Проекты компании"
+                    />
+                  </picture>
                   <div>
                     <p class="portfolio-list__portfolio-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -133,11 +246,33 @@
             <li class="portfolio-list__item">
               <a href="">
                 <div class="portfolio-list__portfoli-images">
-                  <img
-                    src="./images/portfilio/portf3.jpg"
-                    alt="Значок ресторану"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/studio-project3.jpg    1x,
+                        ./images/studio-project3-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/studio-project3-tab.jpg    1x,
+                        ./images/studio-project3-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/studio-project3-mob.jpg    1x,
+                        ./images/studio-project3-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/studio-project3.jpg"
+                      alt="Проекты компании"
+                    />
+                  </picture>
                   <div>
                     <p class="portfolio-list__portfolio-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -158,11 +293,33 @@
             <li class="portfolio-list__item">
               <a href="">
                 <div class="portfolio-list__portfoli-images">
-                  <img
-                    src="./images/portfilio/portf4.jpg"
-                    alt="Навушники"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/studio-project4.jpg    1x,
+                        ./images/studio-project4-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/studio-project4-tab.jpg    1x,
+                        ./images/studio-project4-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/studio-project4-mob.jpg    1x,
+                        ./images/studio-project4-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/studio-project4.jpg"
+                      alt="Проекты компании"
+                    />
+                  </picture>
                   <div>
                     <p class="portfolio-list__portfolio-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -183,11 +340,33 @@
             <li class="portfolio-list__item">
               <a href="">
                 <div class="portfolio-list__portfoli-images">
-                  <img
-                    src="./images/portfilio/portf5.jpg"
-                    alt="Дві коробки"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/studio-project5.jpg    1x,
+                        ./images/studio-project5-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/studio-project5-tab.jpg    1x,
+                        ./images/studio-project5-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/studio-project5-mob.jpg    1x,
+                        ./images/studio-project5-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/studio-project5.jpg"
+                      alt="Проекты компании"
+                    />
+                  </picture>
                   <div>
                     <p class="portfolio-list__portfolio-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -208,11 +387,33 @@
             <li class="portfolio-list__item">
               <a href="">
                 <div class="portfolio-list__portfoli-images">
-                  <img
-                    src="./images/portfilio/portf6.jpg"
-                    alt="Включений монітор"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/studio-project6.jpg    1x,
+                        ./images/studio-project6-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/studio-project6-tab.jpg    1x,
+                        ./images/studio-project6-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/studio-project6-mob.jpg    1x,
+                        ./images/studio-project6-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/studio-project6.jpg"
+                      alt="Проекты компании"
+                    />
+                  </picture>
                   <div>
                     <p class="portfolio-list__portfolio-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -233,11 +434,33 @@
             <li class="portfolio-list__item">
               <a href="">
                 <div class="portfolio-list__portfoli-images">
-                  <img
-                    src="./images/portfilio/portf7.jpg"
-                    alt="Відкрита книжка"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/studio-project7.jpg    1x,
+                        ./images/studio-project7-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/studio-project7-tab.jpg    1x,
+                        ./images/studio-project7-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/studio-project7-mob.jpg    1x,
+                        ./images/studio-project7-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/studio-project7.jpg"
+                      alt="Проекты компании"
+                    />
+                  </picture>
                   <div>
                     <p class="portfolio-list__portfolio-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -258,11 +481,33 @@
             <li class="portfolio-list__item">
               <a href="">
                 <div class="portfolio-list__portfoli-images">
-                  <img
-                    src="./images/portfilio/portf8.jpg"
-                    alt="Бірка"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/studio-project8.jpg    1x,
+                        ./images/studio-project8-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/studio-project8-tab.jpg    1x,
+                        ./images/studio-project8-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/studio-project8-mob.jpg    1x,
+                        ./images/studio-project8-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/studio-project8.jpg"
+                      alt="Проекты компании"
+                    />
+                  </picture>
                   <div>
                     <p class="portfolio-list__portfolio-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -283,11 +528,33 @@
             <li class="portfolio-list__item">
               <a href="">
                 <div class="portfolio-list__portfoli-images">
-                  <img
-                    src="./images/portfilio/portf9.jpg"
-                    alt="Робота за ноутбуком"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/studio-project9.jpg    1x,
+                        ./images/studio-project9-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/studio-project9-tab.jpg    1x,
+                        ./images/studio-project9-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/studio-project9-mob.jpg    1x,
+                        ./images/studio-project9-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/studio-project9.jpg"
+                      alt="Проекты компании"
+                    />
+                  </picture>
                   <div>
                     <p class="portfolio-list__portfolio-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -311,36 +578,39 @@
     </main>
 
     <footer class="footer-section text-decor">
-      <div class="container footer">
-        <div class="container-logoadres">
-          <a href="./index.html" class="logo-footer text-decor"
-            ><span class="logo-web">Web</span>Studio</a
-          >
-          <address>
-            <ul class="address-list list text-decor">
-              <li class="address-list__item">
-                <a
-                  href="https://goo.gl/maps/ijaJ5MrbK64KNwwaA"
-                  class="address-list--geoloc address-list__link"
-                  >м. Київ, пр-т Лесі Українки, 26</a
-                >
-              </li>
-              <li class="address-list__item">
-                <a
-                  href="mailto:info@devstudio.com"
-                  class="address-list__link address-list--contact"
-                  >info@devstudio.com</a
-                >
-              </li>
-              <li class="address-list__item">
-                <a
-                  href="tel:+380961111111"
-                  class="address-list__link address-list--contact"
-                  >+38 096 111 11 11</a
-                >
-              </li>
-            </ul>
-          </address>
+      <div class="container footer footer-flex">
+        <div>
+          <div class="container-logoadres">
+            <a href="./index.html" class="logo-footer text-decor"
+              ><span class="logo-web">Web</span>Studio</a
+            >
+
+            <address>
+              <ul class="address-list list text-decor">
+                <li class="address-list__item">
+                  <a
+                    href="https://goo.gl/maps/ijaJ5MrbK64KNwwaA"
+                    class="address-list--geoloc address-list__link"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="address-list__item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="address-list__link address-list--contact"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="address-list__item">
+                  <a
+                    href="tel:+380961111111"
+                    class="address-list__link address-list--contact"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
         </div>
         <div class="container-joinin">
           <h3 class="container-joinin__text">Приєднуйтесь</h3>
@@ -386,7 +656,7 @@
                 placeholder="E-mail"
               />
             </label>
-            <button type="submit" class="button sub-form__btn">
+            <button type="submit" class="sub-form__btn">
               Підписатися
               <svg class="sub-form__icon" width="24px" height="24px">
                 <use href="./images/symbol-section.svg#icon-sub"></use>
@@ -396,5 +666,12 @@
         </div>
       </div>
     </footer>
+        <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

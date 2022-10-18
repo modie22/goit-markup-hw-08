@@ -1,17 +1,48 @@
 
 .team-section {
   background-color: var(--button-bg);
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and(min-width: 1200px){
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .team-list {
   display: flex;
+  flex-wrap: wrap ;
   &__item {
-  width: 270px;
-}
-  &__item:not(:last-child) {
+     @media screen and (min-width: 480px){
+    width: 450px;
+    &:not(:last-child) {
+   margin-bottom: 30px;
+    }
+  }
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+     &:not(:last-child) {
+    margin-right: 30px;
+    }
+    width: calc((100% - 2 * 15px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    } 
+  }
+    @media screen and (min-width: 1200px){
+        &:not(:last-child) {
   margin-right: 30px;
+  }
+    width: calc((100% - 6 * 15px) / 4); 
+  }
+
 }
+  & > a{
+    height: 100%;
+  }
   & > li {
   background-color: var(--minor-color);
 }

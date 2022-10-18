@@ -1,11 +1,22 @@
 
 .filter-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-
-    &__item:not(:last-child) {
-    margin-right: 8px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  column-gap: 8px;
+  row-gap: 15px;
+   margin: auto;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
   }
     &__button {
   color: var(--title-text-color);
