@@ -1,5 +1,8 @@
 .footer-flex {
     text-align: center;
+    @media screen and (max-width: 1199px) {
+    gap: 60px;
+}
     @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;

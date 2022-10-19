@@ -90,9 +90,13 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  line-height: 0.58;
+  font-size: 12px;
+  line-height: 0.86;
   letter-spacing: 0.03em;
+  @media screen and (min-width: 1200px) {
+      font-size: 14px;
+  line-height: 0.58;
+  }
 }
 .checkbox-policy {
   -webkit-appearance: none;
