@@ -23,6 +23,9 @@
   z-index: 2;
 
   transform: translateX(100%);
+  @media screen and (min-width: 768px) {
+   display: none;
+}
 }
 .menu-container.is-open{
   transform: translateX(0);
